@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Posts</h1>
+<p>Here are some blogs from our amazing authors</p>
+<div>
+  {% for post in posts %}
+    <div class="tourname">
+      <a href="{% url 'post_detail' post.id %}">
+        <p><strong>{{ post.title|capfirst }} </strong></p>
+      </a>
+   </div>
+  {% endfor %}
+<br><br>
+</div>
+{% endblock %}

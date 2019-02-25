@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Our Authors</h1>
+<div>
+  <br><br><br>
+  {% for author in authors %}
+
+      <a href="{% url 'author_detail' author.id %}">
+        <p><strong>{{author.id}} {{author.age}}</strong></p>
+      </a>
+
+  {% endfor %}
+<br><br>
+</div>
+{% endblock %}
