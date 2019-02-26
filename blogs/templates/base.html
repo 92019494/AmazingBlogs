@@ -17,7 +17,7 @@
                     </div>
                     <div id="header-text" class="">
                         <h1 id="site-title">
-                            <a href="/" title="NZ At a Glance" rel="home">Amazing Blogs</a>
+                            <a href="/" title="Amazing Blogs" rel="home">Amazing Blogs</a>
                         </h1>
                         <p id="slogan">We provide all sorts of amazing blogs from authors from all backgrounds</p>
                     </div>
@@ -34,6 +34,7 @@
               <ul class="sidebar-nav">
                 <br><br><br>
                 <li><a href="{% url 'home' %}">Home</a></li>
+                 <li><a href="{% url 'about' %}">About Us</a></li>
                 <li><a href="{% url 'authors' %}">Authors</a></li>
                 <li><a href="{% url 'posts' %}">Posts</a></li>
                 {% if user.is_authenticated %}

@@ -7,6 +7,10 @@ def home(request):
     posts = Post.objects.all()
     return render(request, 'home.html', {'posts': posts})
 
+def about(request):
+
+    return render(request, 'about.html', )
+
 
 def posts(request):
 
@@ -29,7 +33,7 @@ def post_detail(request, id):
 def authors(request):
 
     try:
-        authors = Post.objects.all()
+        authors = Author.objects.all()
     except Post.DoesNotExist:
         raise Http404('Authors not found')
 
@@ -43,3 +47,13 @@ def author_detail(request, id):
         raise Http404('Author not found')
 
     return render(request, 'author_detail.html', {'author': author})
+
+def author_posts(request):
+
+    try:
+        author = Author.objects.all()
+        posts = Author.objects.all()
+    except Post.DoesNotExist:
+        raise Http404('Authors posts not found')
+
+    return render(request, 'author_posts.html', {'author': author}, {'posts': posts})

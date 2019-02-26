@@ -27,6 +27,11 @@ urlpatterns = [
     path('posts/<int:id>/', views.post_detail, name='post_detail'),
     path('authors/', views.authors, name='authors'),
     path('author/<int:id>/', views.author_detail, name='author_detail'),
+    path('about/', views.about, name='about'),
+    path('author/<int:id>/posts/', views.author_posts, name='author_posts'),
+
+
+
 ]
 
 urlpatterns += [

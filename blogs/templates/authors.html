@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Our Authors</h1>
+<h1>Authors</h1>
+<p>Here are some of our amazing authors</p>
 <div>
-  <br><br><br>
   {% for author in authors %}
-
+    <div class="tourname">
       <a href="{% url 'author_detail' author.id %}">
-        <p><strong>{{author.id}} {{author.age}}</strong></p>
+        <p><strong>{{author.first_name|capfirst }}  {{author.last_name|capfirst }}</strong></p>
       </a>
-
+   </div>
   {% endfor %}
 <br><br>
 </div>

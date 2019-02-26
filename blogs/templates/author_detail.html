@@ -1,4 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>{{ author.first_name|capfirst}} {{ author.last|capfirst }}</h1>
+<h1>{{ author.first_name|capfirst }}</h1>
+<h3>{{ author.post|capfirst}} </h3>
 {% endblock %}
