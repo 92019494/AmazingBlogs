@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>{{ author.first_name|capfirst }}</h1>
-<h3>{{ author.post|capfirst}} </h3>
+
+<h3><strong>Name:  </strong>{{ author.first_name|capfirst}} {{ author.last_name|capfirst}}</h3>
+<h3><strong>Age:  </strong>{{author.age}}</h3>
+
+
+<br><br><br><br>
+<a href="{% url 'author_posts' author.id %}">
+  <h3><strong>Posts:  </strong>{{author.post}}</h3>
+</a>
+
+
 {% endblock %}

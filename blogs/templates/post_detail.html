@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>{{ post.title|capfirst}}</h1>
+<h3>{{ post.publish_date }}</h3>
 
 <div>
-  <p><strong>{{ post.title|capfirst }} </strong></p>
+  <p><strong>{{ post.blog|capfirst }} </strong></p>
 <br><br>
 </div>
 {% endblock %}

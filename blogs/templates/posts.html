@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Posts</h1>
+<h1>Blog Posts</h1>
 <p>Here are some blogs from our amazing authors</p>
 <div>
-  {% for post in posts %}
     <div class="tourname">
+        {% for post in posts %}
       <a href="{% url 'post_detail' post.id %}">
-        <p><strong>{{ post.title|capfirst }} </strong></p>
+        <h5><strong>{{ post.title|capfirst }} </strong></h5>
       </a>
    </div>
   {% endfor %}
