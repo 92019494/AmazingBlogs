@@ -19,11 +19,11 @@ from django.conf.urls import url
 from django.urls import include
 
 from blogs import views
+from blogs.models import Author, Post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('posts/', views.posts, name='posts'),
+    path('', views.posts, name='posts'),
     path('posts/<int:id>/', views.post_detail, name='post_detail'),
     path('authors/', views.authors, name='authors'),
     path('author/<int:id>/', views.author_detail, name='author_detail'),

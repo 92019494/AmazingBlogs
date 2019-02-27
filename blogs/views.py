@@ -3,19 +3,15 @@ from django.http import HttpResponse
 # Create your views here.
 from.models import Author,Post
 
-def home(request):
-    posts = Post.objects.all()
-    return render(request, 'home.html', {'posts': posts})
-
 def about(request):
 
     return render(request, 'about.html', )
 
 
-def posts(request):
+def posts(request): # this is the home view
 
     try:
-        posts = Post.objects.all()
+        posts = Post.objects.all().order_by('-publish_date')
     except Post.DoesNotExist:
         raise Http404('Posts not found')
 
@@ -56,3 +52,16 @@ def author_posts(request, id):
         raise Http404('Authors posts not found')
 
     return render(request, 'author_posts.html', {'author': author})
+
+
+
+
+from django.views import generic
+
+class PostListView(generic.ListView):
+    model = Post
+    template_name = 'posts.html'
+
+class AuthorListView(generic.ListView):
+    model = Author
+    template_name = 'authors.html'

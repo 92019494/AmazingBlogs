@@ -5,8 +5,8 @@
 <div>
   {% for author in authors %}
     <div class="tourname">
-      <a href="{% url 'author_detail' author.id %}">
-        <h3>{{author.first_name|capfirst }}  {{author.last_name|capfirst }}</h3>
+      <a  href="{% url 'author_detail' author.id %}">
+        <h3 id="myLinks">{{author.first_name|capfirst }}  {{author.last_name|capfirst }}</h3>
       </a>
    </div>
   {% endfor %}

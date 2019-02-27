@@ -33,10 +33,9 @@
               {% block sidebar %}
               <ul class="sidebar-nav">
                 <br><br><br>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                 <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'posts' %}">Home</a></li>
                 <li><a href="{% url 'authors' %}">Authors</a></li>
-                <li><a href="{% url 'posts' %}">All Blog Posts</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
                 {% if user.is_authenticated %}
                   <li>User: {{ user.get_username }}</li>
                   <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>

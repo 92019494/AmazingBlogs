@@ -1,14 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-
+<h1><strong>Bio</strong></h1>
 <h5><strong>Name:  </strong>{{ author.first_name|capfirst}} {{ author.last_name|capfirst}}</h5>
 <h5><strong>Age:  </strong>{{author.age}}</h5>
-
-
-<br><br><br><br>
-<a href="{% url 'author_posts' author.id %}">
-  <h5><strong>Posts:  </strong>{{author.post}}</h5>
-</a>
 
 
 {% endblock %}
