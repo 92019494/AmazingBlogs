@@ -6,7 +6,7 @@
     <div class="tourname">
         {% for post in posts %}
       <a href="{% url 'post_detail' post.id %}">
-        <h5 id="myLinks"><strong>{{ post.title|capfirst }} </strong></h5>
+        <h5 id="myLinks">{{ post.title|capfirst }} </h5>
       </a>
    </div>
   {% endfor %}

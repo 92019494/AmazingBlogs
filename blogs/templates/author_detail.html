@@ -1,8 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-<h1><strong>Bio</strong></h1>
+<h1>Bio</h1>
 <h5><strong>Name:  </strong>{{ author.first_name|capfirst}} {{ author.last_name|capfirst}}</h5>
 <h5><strong>Age:  </strong>{{author.age}}</h5>
+<h5><strong>Posts</strong></h5>
+<ul>
 
-
+{% for post in posts %}
+  {% if author.id == post.author.id %}
+    <a href="{% url 'post_detail' post.id %}">
+      <h5 id="myLinks">{{post.title}}</h5>
+    <a/>
+  {% endif %}
+{% endfor %}
+</ul>
 {% endblock %}

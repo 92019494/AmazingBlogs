@@ -39,20 +39,11 @@ def author_detail(request, id):
 
     try:
         author = Author.objects.get(id=id)
+        posts = Post.objects.all().order_by('-publish_date')
     except Post.DoesNotExist:
         raise Http404('Author not found')
 
-    return render(request, 'author_detail.html', {'author': author})
-
-def author_posts(request, id):
-
-    try:
-        author = Author.objects.get(id=id)
-    except Post.DoesNotExist:
-        raise Http404('Authors posts not found')
-
-    return render(request, 'author_posts.html', {'author': author})
-
+    return render(request, 'author_detail.html', {'author': author, 'posts': posts})
 
 
 

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<h1><strong>{{ post.title|capfirst}}</h1></strong>
+<h1>{{ post.title|capfirst}}</h1>
 <a id="myLinks" href="{% url 'author_detail' post.author.id %}">
-  <h3 id="myLinks">By {{post.author.first_name|capfirst }}  {{post.author.last_name|capfirst }}</h3>
+  <h5 id="myLinks">By {{post.author.first_name|capfirst }}  {{post.author.last_name|capfirst }}</h5>
 </a>
-<h3>{{ post.publish_date }}</h3>
+<h5>{{ post.publish_date }}</h5>
 
 <div>
   <p><strong>{{ post.blog|capfirst }} </strong></p>
