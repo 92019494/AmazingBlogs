@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+
 <h1>Posts</h1>
 <p>Here are some blogs from our amazing authors</p>
 <div>
-    <div class="tourname">
+    <div>
         {% for post in posts %}
       <a href="{% url 'post_detail' post.id %}">
         <h5 id="myLinks">{{ post.title|capfirst }} </h5>
