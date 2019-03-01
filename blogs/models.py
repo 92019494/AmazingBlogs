@@ -15,7 +15,7 @@ class Author(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    blog = models.TextField(null=True)
+    body = models.TextField(null=True)
     publish_date = models.DateField(auto_now=False, auto_now_add=False, null=True)
     author = models.ForeignKey('Author', on_delete=models.CASCADE, null=True)
 

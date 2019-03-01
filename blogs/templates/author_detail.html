@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Bio</h1>
+<h1 style="font-size:44px;">Bio</h1>
 <h5><strong>Name:  </strong>{{ author.first_name|capfirst}} {{ author.last_name|capfirst}}</h5>
 <h5><strong>Age:  </strong>{{author.age}}</h5>
+<h5><strong>Phone Number:  </strong>0{{author.phone_number}}</h5>
+<h5><strong>Email:  </strong>{{author.email}}</h5>
 <h5><strong>Posts</strong></h5>
 <ul>
 
