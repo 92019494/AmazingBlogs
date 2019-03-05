@@ -2,7 +2,7 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <title>Home - Amazing Blogs</title>
+        <title>Home - Clera & Co</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -17,9 +17,9 @@
                     </div>
                     <div id="header-text" class="">
                         <h1 id="site-title">
-                            <a href="/" title="Amazing Blogs" rel="home">Amazing Blogs</a>
+                            <a href="/" title="Amazing Blogs" rel="home">Clera & Co</a>
                         </h1>
-                        <p id="slogan">We provide all sorts of amazing blogs from authors from all backgrounds</p>
+                        <p id="slogan">We provide blogs from our amazing staff</p>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
               <ul class="sidebar-nav">
                 <br><br><br>
                 <li><a href="{% url 'posts' %}">Home</a></li>
-                <li><a href="{% url 'authors' %}">Authors</a></li>
+                <li><a href="{% url 'authors' %}">Employees</a></li>
                 <li><a href="{% url 'about' %}">About Us</a></li>
                 {% if user.is_authenticated %}
                   <li>User: {{ user.get_username }}</li>
@@ -79,7 +79,7 @@
             </div>
             <footer id="colophon">
                 <div class="inner-wrap">
-                    Amazing blogs is a unique webpage for enthusiastic bloggers!
+                    Clera & Co is a unique page that enables our staff to update other colleagues of the day to day activities they wish to share.
                 </div>
             </footer>
         </div>
